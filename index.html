@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorite Anime</title>
+
+    <link rel="icon" type="image/png" href="as.jpg">
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function sharePost() {
+            let count = localStorage.getItem('shareCount') || 0;
+            count++;
+            localStorage.setItem('shareCount', count);
+            document.getElementById('share-count').innerText = count;
+        }
+
+        window.onload = function() {
+            document.getElementById('share-count').innerText = localStorage.getItem('shareCount') || 0;
+        }
+    </script>
+</head>
+<body>
+    <div class="content">
+        <div class="container">
+            <h1>My Favorite Anime!</h1>
+        </div>
+    </div>
+ 
+    <div class="bottom-nav">
+        <a class='nav-item' href='file:///C:/Users/LENOVO/OneDrive/Documents/GitHub/Cerillaprjct/pages2.html'>Click Here!</a>
+        <button onclick="sharePost()" class="nav-item">&#128077; Like <span id="share-count">0</span></button>
+        <a class='nav-item' href='file:///C:/Users/LENOVO/OneDrive/Documents/GitHub/Cerillaprjct/About%20us.html'>About us</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 IT Era Midterm Project.</p>
+    </footer>
+</body>
+</html>

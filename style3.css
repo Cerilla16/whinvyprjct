@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    background-color: #f4f4f4;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),  url('assasin.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.top-left, .bottom-right, .top-right, .bottom-left {
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.top-left, .bottom-right {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+.top-right, .bottom-left {
+    overflow: hidden;
+}
+
+.top-right img, .bottom-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .top-left, .bottom-right, .top-right, .bottom-left {
+        flex: 1 1 50%;
+        width: 100%;
+        height: 50vh;
+        font-size: 1.5rem;
+    }
+}
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    font-size: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.back-button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);  
+    width: 100%;
+    padding: 10px 0;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    text-align: center;
+    background-color: #0bb9c9;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.nav-item:hover {
+    background-color: #ea2a2a;
+    color: white;
+}
